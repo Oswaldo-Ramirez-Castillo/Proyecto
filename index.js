@@ -15,10 +15,10 @@ app.use(cors());
 
 // Configuración de conexión a la base de datos
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "entrenador",
+    host: process.env.DB_HOST,        // El host será la URL proporcionada por Render
+    user: process.env.DB_USER,        // Usuario de la base de datos
+    password: process.env.DB_PASSWORD,  // Contraseña de la base de datos
+    database: process.env.DB_NAME
 });
 
 // Conexión a la base de datos
