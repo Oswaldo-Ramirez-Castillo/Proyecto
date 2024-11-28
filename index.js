@@ -15,11 +15,11 @@ app.use(cors());
 
 // Configuración de conexión a la base de datos
 const db = mysql.createConnection({
-    MYSQLHOST: "autorack.proxy.rlwy.net", // El host será la URL proporcionada por Render
-    MYSQLUSER: "root",  // Usuario de la base de datos
-    MYSQLPASSWORD: "YArpzaGSYLhzFOlgpXerPwOFZcZtdmHX",  // Contraseña de la base de datos
-    MYSQL_DATABASE: "railway",
-    MYSQLPORT: 16563
+    host: "autorack.proxy.rlwy.net", // El host será la URL proporcionada por Render
+    user: "root",  // Usuario de la base de datos
+    database: "railway",
+    port: 16563,
+    password: "YArpzaGSYLhzFOlgpXerPwOFZcZtdmHX"  // Contraseña de la base de datos        
 });
 
 // Conexión a la base de datos
@@ -302,7 +302,7 @@ app.post('/submit', upload.fields([
 });
 
 // Iniciar el servidor
-const PORT = 8082;
+//const PORT = 8082;
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
