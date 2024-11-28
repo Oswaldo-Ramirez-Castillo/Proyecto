@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 const { body, validationResult } = require('express-validator');
-const port = process.env.PORT || 8082;
+const port = 16563 || 8082;
 const app = express();
 // Middlewares para parsear el cuerpo de la solicitud
 app.use(express.json());
@@ -15,8 +15,8 @@ app.use(cors());
 
 // Configuración de conexión a la base de datos
 const db = mysql.createConnection({
-    MYSQLHOST: autorack.proxy.rlwy.net,        // El host será la URL proporcionada por Render
-    MYSQLUSER: root,        // Usuario de la base de datos
+    MYSQLHOST: autorack.proxy.rlwy.net, // El host será la URL proporcionada por Render
+    MYSQLUSER: root,  // Usuario de la base de datos
     MYSQLPASSWORD: YArpzaGSYLhzFOlgpXerPwOFZcZtdmHX,  // Contraseña de la base de datos
     MYSQL_DATABASE: railway
 });
