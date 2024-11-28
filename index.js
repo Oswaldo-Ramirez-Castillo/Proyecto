@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 const { body, validationResult } = require('express-validator');
-
+const port = process.env.PORT || 4000;
 const app = express();
 // Middlewares para parsear el cuerpo de la solicitud
 app.use(express.json());
@@ -302,6 +302,6 @@ app.post('/submit', upload.fields([
 
 // Iniciar el servidor
 const PORT = 8082;
-app.listen(PORT, () => {
+app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
