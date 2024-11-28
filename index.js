@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 const { body, validationResult } = require('express-validator');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8082;
 const app = express();
 // Middlewares para parsear el cuerpo de la solicitud
 app.use(express.json());
