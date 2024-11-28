@@ -18,7 +18,8 @@ const db = mysql.createConnection({
     MYSQLHOST: autorack.proxy.rlwy.net, // El host será la URL proporcionada por Render
     MYSQLUSER: root,  // Usuario de la base de datos
     MYSQLPASSWORD: YArpzaGSYLhzFOlgpXerPwOFZcZtdmHX,  // Contraseña de la base de datos
-    MYSQL_DATABASE: railway
+    MYSQL_DATABASE: railway,
+    MYSQLPORT: 16563
 });
 
 // Conexión a la base de datos
