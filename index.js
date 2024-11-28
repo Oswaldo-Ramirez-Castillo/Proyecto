@@ -15,10 +15,10 @@ app.use(cors());
 
 // Configuración de conexión a la base de datos
 const db = mysql.createConnection({
-    host: mysql.railway.internal,        // El host será la URL proporcionada por Render
-    user: root,        // Usuario de la base de datos
-    password: YArpzaGSYLhzFOlgpXerPwOFZcZtdmHX,  // Contraseña de la base de datos
-    database: railway
+    MYSQLHOST: mysql.railway.internal,        // El host será la URL proporcionada por Render
+    MYSQLUSER: root,        // Usuario de la base de datos
+    MYSQLPASSWORD: YArpzaGSYLhzFOlgpXerPwOFZcZtdmHX,  // Contraseña de la base de datos
+    MYSQL_DATABASE: railway
 });
 
 // Conexión a la base de datos
