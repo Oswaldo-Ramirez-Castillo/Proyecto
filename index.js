@@ -349,5 +349,5 @@ app.post('/submit', upload.fields([
 // Iniciar el servidor
 //const PORT = 8082;
 app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`Servidor escuchando en el puerto ${port}`);
 });
